@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+class student{
+    public: 
+    char stdname[100],course[10];
+    long ch;
+    char date[12],status[12],reg[10];
+    int n;
+    public:
+    void accept(){
+        cout<<"STUDENT REGISTERATION APP";
+        cout<<endl<<"-------------------";
+        cout<<endl<<"1.ADD STUDENT DATA"<<endl;
+         cout<<"2.MODIFY STUDENT DATA"<<endl;
+             cout<<"3.DELETE STUDENT DATA"<<endl;
+             cout<<"4.VIEW ALL STUDENT DATA"<<endl;
+             cout<<"5.VIEW SINGLE STUDENT"<<endl;
+           cout<<"6.EXIT"<<endl;
+             cout<<"ENTER THE CHOICE : ";
+             cin>>ch;
+           
+        switch(ch){
+            case 1:
+            cout<<endl<<"1.ADD STUDENT DATA";
+            add();
+            break;
+            case 2:
+             cout<<endl<<"2.MODIFY STUDENT DATA";
+             update();
+            break;
+             case 3:
+             cout<<endl<<"3.DELETE STUDENT DATA";
+               cout<<"UNABLE TO REACH NETWORK";
+            break;
+             case 4:
+             cout<<endl<<"4.VIEW ALL STUDENT DATA";
+             cout<<"UNABLE TO REACH NETWORK";
+                       break;
+             case 5:
+             cout<<endl<<"5.VIEW SINGLE STUDENT";
+               cout<<"UNABLE TO REACH NETWORK";
+            break;
+            default:
+             cout<<endl<<"6.EXIT";
+             
+
+                    }
+        
+    }
+    void add(){
+        cout<<endl<<"ENTER THE NUMBER OF STUDENTS : ";
+        cin>>n;
+        for(int i=0;i<n;i++){
+        cout<<"ENTER STUDENT NAME  "<<i+1<<":";
+        cin>>stdname;
+        cout<<"ENTER THE STUDENT REGISTER NUMBER "<<i+1<<":";
+        cin>>reg;
+        cout<<"ENTER THE COURSE NAME "<<i+1<<":";
+        cin>>course;
+        }
+    }
+    void update(){
+        cout<<"WHICH STUDENT DETAIL DO YOU WHAT IS UPDATE?"<<endl;
+        cout<<"ENTER THE REGISTER NUMBER : ";
+        cin>>reg;
+    if(reg==NULL){
+        
+      cout<<"not available";  
+    }else{
+       cout<<"ENTER THE COURSE COMPLETION DATE :";
+       cin>>date;
+       cout<<"ENTER THE STUDENT STATUS ACTIVE OR INACTIVE :";
+       cin>>status;  
+    }
+      
+    }
+   
+    
+};
+int main()
+{
+  
+  student obj;
+  obj.accept();
+  
+ 
+
+    return 0;
+}
